@@ -22,7 +22,7 @@ pipeline {
 
         stage("Docker Build") {
             steps {
-                binaryBuild(buildConfigName: appName, buildFromPath: ".")
+                binaryBuild(projectName: "defaulte", buildConfigName: appName, buildFromPath: ".")
             }
         }
     }
