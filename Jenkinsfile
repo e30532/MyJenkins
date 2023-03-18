@@ -9,8 +9,17 @@ retriever: modernSCM(
 appName = "myjenkins"
 
 pipeline {
-    agent any
+    agent {
+      label 'maven'
+    }
     stages {
+
+        stage('Build'){
+          steps {
+            sh "mvn clean install -q"
+          }
+        }
+
         stage("Docker Build") {
             steps {
                 binaryBuild(buildConfigName: appName, buildFromPath: ".")
