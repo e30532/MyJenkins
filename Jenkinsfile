@@ -9,7 +9,7 @@ retriever: modernSCM(
 appName = "myjenkins"
 
 pipeline {
-    agent { any }
+    agent { label 'maven' }
     stages {
         stage("Docker Build") {
             steps {
