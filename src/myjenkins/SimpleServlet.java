@@ -27,7 +27,7 @@ public class SimpleServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served1 at: ").append(request.getContextPath());
+		response.getWriter().append("Served2 at: ").append(request.getContextPath());
 	}
 
 	/**
